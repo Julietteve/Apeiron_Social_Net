@@ -1,0 +1,177 @@
+* {
+  border-radius: 0 !important;
+  font-family: "Montserrat";
+  outline:0px !important;
+
+
+}
+
+
+input {
+  padding: 10%;
+  border: 0 !important;
+  outline: 0 !important;
+  border-bottom: 1px solid black !important ;
+}
+
+
+
+input:invalid {
+    background-color: transparent;
+
+}
+
+input:valid {
+    background-color: transparent;
+}
+
+.container-fluid{
+  background-color: white;
+  width: 100%;
+}
+
+/* .t{
+  padding: 5%;
+} */
+
+.img-logic{
+  z-index: -10;
+  opacity: 0.6;
+}
+
+.login-cont{
+  position: relative;
+  text-align: center;
+  color: white;
+
+}
+
+.Journey{
+  font-size: 10em;
+  text-align: left;
+}
+
+.show-up{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+}
+
+
+.seen{
+  font-size: 2.5em;
+  letter-spacing: 1em;
+  color: #403A37 ;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+
+}
+.log-in-title{
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 2em;
+  font-weight: lighter;
+  padding-right: 10%;
+  padding-bottom:10%;
+  padding-top: 10%;
+
+}
+
+.login-button{
+  display: block;
+  padding-right: 5%;
+  padding-bottom: 1%;
+  padding-top: 5%;
+
+}
+
+.login-password{
+  display: block;
+  padding-right: 5%;
+  padding-bottom: 5%;
+  padding-top: 1%;
+}
+
+.register-a{
+  display: inline-block;
+
+}
+
+.logo{
+  filter: brightness(150%) sepia(0) saturate(0) hue-rotate(25deg);
+  padding: 20%;
+  width: 60%;
+}
+
+.register-color{
+  color:  #ba9765;
+}
+.register-color:hover{
+  color:black;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: transparent;
+  box-shadow: none;
+  outline: 0 none;
+}
+
+.input-holder{
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+.labels{
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+
+.btn-primary.custom-btn {
+  color: black;
+	background-color: transparent;
+	border-color: #EEEAE9 !important;
+  padding: 3%;
+}
+
+
+.btn-primary:hover {
+  border: none;
+  color :white;
+  background-color: #ba9765 !important;
+}
+
+.btn-primary:focus {
+  color : white;
+  background-color:#ba9765  !important;
+}
+
+.btn-primary:active {
+  color:  white;
+  background-color: #ba9765 !important;
+}
+
+.container-form{
+
+}
