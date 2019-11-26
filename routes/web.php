@@ -20,10 +20,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-// USERS CONTROLLER
+// users
+Route::get('/profile/{id}', 'UserController@index'); //ver perfil
 
-Route::get('/search', 'UserController@search');
 
+
+//posts
 Route::get('/post', 'PostsController@index'); // listar todos los posts
 Route::get('/post/new', 'PostsController@create'); // mostrar formulario de alta
 Route::post('/post', 'PostsController@store'); // guardar los datos del form

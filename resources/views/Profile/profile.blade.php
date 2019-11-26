@@ -1,5 +1,7 @@
-<?php include'header.php';?>
+@extends ('layouts.header')
 
+
+@section('content')
 
 <!-- BANNER -->
 
@@ -31,11 +33,11 @@
 
 
               <div class="user-name">
-                <p> Stella Kraver</p>
+                <p> {{ $user->name}}</p>
               </div>
 
               <div class="profession">
-                <p> Sculptor at Weta</p>
+                <p> {{ $user->country}} </p>
                 <a href="https://www.wetanz.com/">www.wetanz.com/</a>
               </div>
 
@@ -151,8 +153,4 @@
 
 </div>
 
-
-
-
-
-<?php include'footer.php';?>
+@endsection
