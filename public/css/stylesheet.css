@@ -1000,6 +1000,7 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color: white;
 }
 
 input:focus {
@@ -1086,7 +1087,7 @@ input:focus {
   padding: 5%;
   border:1px ;
   -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.2), 0 0 0px rgba(0, 0, 0, 0.1) inset;
-  margin: 3%;
+  margin: 2%;
 
 }
 

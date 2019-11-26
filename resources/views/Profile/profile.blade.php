@@ -33,11 +33,11 @@
 
 
               <div class="user-name">
-                <p> {{ $user->name}}</p>
+                <p>{{Auth::user()->name}}</p>
               </div>
 
               <div class="profession">
-                <p> {{ $user->country}} </p>
+              <p> {{ $user->country}} </p>
                 <a href="https://www.wetanz.com/">www.wetanz.com/</a>
               </div>
 
@@ -89,12 +89,12 @@
 
     <div class="about">
       <p class="about-title">About</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p>  {{ $user->about}} </p>
     </div>
 
     <div class="abilities">
       <p class="about-title">abilities</p>
-      <p> #sculping # weta #monstersFX #theLordOfTheRings #FX </p>
+      <p>  {{ $user->skills}}</p>
 
     </div>
 

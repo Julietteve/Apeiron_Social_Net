@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use Auth;
 
 class PostsController extends Controller
 {
@@ -38,14 +39,29 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-      $this->validate($request, [
+      $this->validate($request,
+      [
             'post_text' => 'required',
-            'post_img' => 'file',
-            'post_video' => 'file',
+            'post_image' => ['file','image','required'],
+      ],
+      );
 
-        ]);
 
-        Post::create($request->all());
+        $newPost= new Post;
+
+        $newPost->post_text=$request->post_text;
+
+
+        // dd($request->file('post_image'));
+        $path = $request->file('post_image')->store('public');
+        $file=basename($path);
+
+        $newPost->post_image=$file;
+        $newPost->user_id = Auth::user()->id;
+
+        $newPost->save();
+
+
 
         return redirect('post');
     }
@@ -82,7 +98,7 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**
