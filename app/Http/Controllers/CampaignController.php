@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Campain;
+use Auth;
 
-class CampaignController extends Controller
+
+class CampaignsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +16,10 @@ class CampaignController extends Controller
      */
     public function index()
     {
-        return view('campaigns.campaign');
+      $campaings= Campain::all();
+        return view('campaigns.campaigns',[
+            'campains'=>$campaigns,
+          ]);
     }
 
     /**
@@ -21,9 +27,12 @@ class CampaignController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($campaigns)
     {
-        //
+       //  'name'=> $name,
+       //  'images'=> $images,
+       // 'description'=> $description,
+       // 'created_at'=> $created_at,
     }
 
     /**
@@ -34,7 +43,17 @@ class CampaignController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this->validate($request, [
+            'name' => 'required',
+            'images' => 'file',
+            'video' => 'file',
+            'description' => 'required',
+
+        ]);
+
+        Post::create($request->all());
+
+        return redirect('campains');
     }
 
     /**
@@ -68,7 +87,32 @@ class CampaignController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $campaigns = Campaigns::find($id);
+
+        $campaigns_files = [
+          'name' => 'required',
+          'images' => 'file',
+          'video' => 'file',
+          'description' => 'required',
+        ];
+
+
+        $this->validate($request,$campaigns)
+
+        // $lider->nombre_y_apellido = $request->input('name');
+        // $lider->medio = $request->input('medio');
+        // $lider->cumpleanios = $request->input('fecha_nac');
+        // $lider->estilo = $request->input('estilo');
+        // $lider->perfil = $request->input('perfil');
         //
+        // if($request->file('foto') !== null) {
+        //     $file = $request->file('foto')->store('lideres/fotos', 'public');
+        //     $lider->foto = $file;
+        // }
+
+        $campaigns->save();
+
+        return redirect()->back()->with('success', 'La ficha se actualizó de manera correcta');
     }
 
     /**
