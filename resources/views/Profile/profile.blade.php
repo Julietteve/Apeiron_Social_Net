@@ -55,8 +55,8 @@
 
               <div class="profile-button ">
 
-                  <button type="button" name="button"      class="btn btn-outline-secondary  follow-contact ">Follow</button>
-                  <button type="button" name="button"      class="btn btn-outline-secondary  follow-contact ">Contact</button>
+                <a href="{{ route('user.follow', $user->id }}"><button type="button" name="button"      class="btn btn-outline-secondary  follow-contact ">Follow</button></a>
+                  <a href="{{ route('user.unfollow', $user->id }}"><button type="button" name="button"      class="btn btn-outline-secondary  follow-contact ">unfollow</button></a>
 
                 </div>
 

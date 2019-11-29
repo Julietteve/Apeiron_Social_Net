@@ -7,13 +7,15 @@ use App\Post;
 
 class Post extends Model
 {
-    public $table = "post";
+    public $table = "posts";
     public $guarded=[];
 
 
     protected $fillable = [
-        'post_text'
-    ];
+        'post_text',
+        'post_image',
+      'post_video' ,
+       ];
 
 
     public function Users (){

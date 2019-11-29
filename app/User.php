@@ -15,16 +15,9 @@ class User extends Authenticatable
       return $this->hasMany(Post::class);
     }
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
-    protected $guarded = [];
-
-    // protected $fillable = [
-    //     'name', 'email', 'password', 'nickname', 'country'
-    // ];
+    protected $fillable = [
+        'name', 'email', 'password', 'nickname', 'country'
+    ];
 
     /**
      * The attributes that should be hidden for arrays.
@@ -43,4 +36,23 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function followers()
+    {
+        return $this->belongsToMany(User::class, 'followers', 'leader_id', 'follower_id')->withTimestamps();
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function followings()
+    {
+        return $this->belongsToMany(User::class, 'followers', 'follower_id', 'leader_id')->withTimestamps();
+    }
+
+
+
 }

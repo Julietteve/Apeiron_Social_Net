@@ -19,9 +19,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//profile
+route::post('profile/{profileId}/follow', 'ProfileController@followUser')->name('user.follow');
+route::post('/{profileId}/unfollow', 'ProfileController@unFollowUser')->name('user.unfollow');
+
 
 // users
-Route::get('/profile/{id}', 'UserController@index'); //ver perfil
+Route::get('/profiles/{id}', 'UserController@index'); //ver perfil
 
 
 

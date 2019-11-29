@@ -16,9 +16,9 @@ class CreateCampaignsTable extends Migration
         Schema::create('campaigns', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
-            $table-> text('name');
-            $table-> text('description');
-            $table-> text('image');
+            $table->string('name');
+            $table->text('description');
+            $table->string('image');
             $table->integer ('video');
         });
     }
