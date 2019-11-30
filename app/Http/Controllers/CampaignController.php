@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Campaigns;
+use Auth;
 
 class CampaignController extends Controller
 {
@@ -13,7 +15,12 @@ class CampaignController extends Controller
      */
     public function index()
     {
-        return view('campaigns.campaign');
+      $campaigns= Campaigns::all();
+
+        return view('profile.profile',[
+            'user' => auth()->user(),
+            'campaigns'=>$campaigns,
+          ]);
     }
 
     /**
@@ -23,7 +30,7 @@ class CampaignController extends Controller
      */
     public function create()
     {
-        //
+        return view('profile.profile');
     }
 
     /**
@@ -34,8 +41,33 @@ class CampaignController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this->validate($request,
+      [
+            'campaign_text' => 'required',
+            'campaign_image' => ['file','image','required'],
+      ],
+      );
+
+
+        $newCampaign= new Campaign;
+
+        $newPost->campaign_text=$request->campaign_text;
+
+
+        // dd($request->file('post_image'));
+        $path = $request->file('campaign_image')->store('public');
+        $file=basename($path);
+
+        $newCampaign->campaign_image=$file;
+        $newCampaign->user_id = Auth::user()->id;
+
+        $newCampaign->save();
+
+
+
+        return redirect('campaigns');
     }
+
 
     /**
      * Display the specified resource.
@@ -45,7 +77,7 @@ class CampaignController extends Controller
      */
     public function show($id)
     {
-        //
+          return $campaign;
     }
 
     /**
@@ -68,7 +100,7 @@ class CampaignController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**

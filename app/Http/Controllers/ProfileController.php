@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class ProfileController extends Controller
 {
@@ -91,13 +92,14 @@ class ProfileController extends Controller
 public function followUser(int $profileId)
 {
   $user = User::find($profileId);
-  if(! $user) {
 
+  if(! $user) {
      return redirect()->back()->with('error', 'User does not exist.');
  }
 
-$user->followers()->attach(auth()->user()->id);
-return redirect()->back()->with('success', 'Successfully followed the user.');
+ $user->followers()->attach(auth()->user()->id);
+
+ return redirect()->back()->with('success', 'Successfully followed the user.');
 }
 
 /**

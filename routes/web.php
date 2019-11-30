@@ -20,8 +20,8 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //profile
-route::post('profile/{profileId}/follow', 'ProfileController@followUser')->name('user.follow');
-route::post('/{profileId}/unfollow', 'ProfileController@unFollowUser')->name('user.unfollow');
+Route::post('follows/{profileId}', 'ProfileController@followUser')->name('user.follow');
+Route::delete('follows/{profileId}', 'ProfileController@unFollowUser')->name('user.unfollow');
 
 
 // users

@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Post;
+use App\Campaigns;
 
 class User extends Authenticatable
 {
@@ -13,6 +14,10 @@ class User extends Authenticatable
 
     public function Posts (){
       return $this->hasMany(Post::class);
+    }
+
+    public function Campaigns (){
+      return $this->hasMany(Campaigns::class);
     }
 
     protected $fillable = [

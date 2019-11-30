@@ -23,14 +23,9 @@
 
 
             <div class="profile-data">
-
-
-
               <div class="profile-pic">
                 <img src="img/profilepic.png" class="img-fluid" alt="">
               </div>
-
-
 
               <div class="user-name">
                 <p>{{Auth::user()->name}}</p>
@@ -54,9 +49,18 @@
               </div>
 
               <div class="profile-button ">
+                <form action="{{ route('user.follow', $user->id) }}" method="post">
+                  @csrf
 
-                <a href="{{ route('user.follow', $user->id }}"><button type="button" name="button"      class="btn btn-outline-secondary  follow-contact ">Follow</button></a>
-                  <a href="{{ route('user.unfollow', $user->id }}"><button type="button" name="button"      class="btn btn-outline-secondary  follow-contact ">unfollow</button></a>
+                  <button
+                    type="submit"
+                    class="btn btn-outline-secondary follow-contact">
+                    Follow
+                  </button>
+                </form>
+
+
+                  <a href="{{ route('user.unfollow', $user->id )}}"><button type="button" name="button"      class="btn btn-outline-secondary  follow-contact ">unfollow</button></a>
 
                 </div>
 
@@ -144,6 +148,26 @@
 
 
   </div>
+  </div>
+
+
+  <div class="container">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">fdgdfgdfg</div>
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">.67567</div>
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">..ttdth.</div>
+    </div>
   </div>
 
 
