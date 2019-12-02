@@ -21,7 +21,7 @@
 
 
       <!-- Internal CSS -->
-      <link rel="stylesheet" href="css/stylesheet.css">
+      <link rel="stylesheet" href="/css/stylesheet.css">
 
       <!-- fontawesome -->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -34,9 +34,9 @@
   <a name="top"></a>
   <!-- MENU RESPONSIVE -->
 
-  <nav class="navbar  sticky-top navbar-expand-lg  navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
 
-  <a class="navbar-brand" href="home.php"><img  class="img-responsive logo" src="img/apeiron_logo.png" alt=""></a>
+  <a class="navbar-brand" href="home.php"><img  class="img-responsive logo" src="/img/apeiron_logo.png" alt=""></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" arias-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

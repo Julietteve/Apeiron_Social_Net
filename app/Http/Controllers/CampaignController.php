@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Campaigns;
 use Auth;
 
+
 class CampaignController extends Controller
 {
     /**
@@ -30,7 +31,7 @@ class CampaignController extends Controller
      */
     public function create()
     {
-        return view('profile.profile');
+        return view('campaigns.create');
     }
 
     /**

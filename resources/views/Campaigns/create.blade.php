@@ -21,7 +21,7 @@
 
 
       <!-- Internal CSS -->
-      <link rel="stylesheet" href="css/campaignstylesheet.css">
+      <link rel="stylesheet" href="/css/campaignstylesheet.css">
 
       <!-- fontawesome -->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
@@ -31,47 +31,62 @@
 
 </head>
 
+
+
   <body>
 
-        <div class="container-fluid">
 
-          <div class="camp-cont">
 
-              <div class="">
+
+        <div class=" camp-cont container-fluid">
+
+          <div class=" row ">
+
+              <div class="col-12">
 
                 <form action="/Campaign" method="post" enctype="multipart/form-data" name="cargaPost">
                     @csrf
 
 
-                        <h2> name</h2>
+                    <div >
+                      <label for="file-input">
+                        Name of the Campaign
+                     </label>
+                      <input class="pic-up" id="file-input" type="text" name="post_image" value="">{{ $errors->first('post_image') }}
+                    </div>
 
 
                     <div class="image-upload">
                       <label for="file-input">
-                        <img class="upload_icon" src="img/upload_pic.png"/>
+                        <div class="img-cont"><img class="upload_icon img-fluid" src="/img/triangle-upload.png"/>  <p class="here">Upload your files here</p> </div>
                      </label>
                       <input class="pic-up" id="file-input" type="file" name="post_image" value="">{{ $errors->first('post_image') }}
+
+
                     </div>
 
-                    <div class="image-upload">
+
+
+                    <div >
                       <label for="file-input">
-                        description
+                        Description
+                     </label>
+                      <input class="pic-up" id="file-input" type="text" name="post_image" value="">{{ $errors->first('post_image') }}
+
+                    </div>
+
+                    <div >
+                      <label for="file-input">
+                        Tags
                      </label>
                       <input class="pic-up" id="file-input" type="text" name="post_image" value="">{{ $errors->first('post_image') }}
                     </div>
 
-                    <div class="image-upload">
-                      <label for="file-input">
-                        tags
-                     </label>
-                      <input class="pic-up" id="file-input" type="text" name="post_image" value="">{{ $errors->first('post_image') }}
-                    </div>
 
 
 
 
-
-                        <button class="boton-post "> Post </button>
+                        <button class="btn-primary custom-btn">Post</button>
                 </form>
 
 
@@ -86,16 +101,6 @@
 
 
 
-
-      
-
-
-
-<!-- Bootstrap core JavaScript
-    ================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 
 

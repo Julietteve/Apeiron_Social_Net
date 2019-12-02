@@ -3,7 +3,7 @@
     <div id="up"><a href="#top"> <img class="up"src="img/up.png"alt=""></a></div>
 
       <footer>
-        <div class="footer-top">
+        <div class="position-sticky footer-top">
           <div class="container-fluid">
             <div class="row">
               <div class="col-4 col-sm-3 col-xs-12 footer-one">

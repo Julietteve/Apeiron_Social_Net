@@ -16,7 +16,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
-
+a:hover {
+  color: inherit;
+}
 
 .navbar-toggler{
   border:0px;
@@ -300,8 +302,14 @@ footer{
 /* PROFILE */
 /* Container */
 
+div.container{
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 0px;
+}
 .profiles{
-  background-color:#E4E4E4;
+  background-color:#EEEEEE ;
+
 }
 
 .profile-pic{
@@ -313,13 +321,10 @@ footer{
 
 .profile-data{
   background-color: white;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 90%;
+ margin-bottom: 10%;
+  width: 100%;
   padding: 8px;
-  -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.2), 0 0 0px rgba(0, 0, 0, 0.1) inset;
 }
 
 .profile-data p {
@@ -329,10 +334,10 @@ footer{
 .user-name p{
   font-size: 1em;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: bold;
+  letter-spacing: 0.2em;
+  font-weight: 500;
   margin: 0px;
-  padding: 0px;
+  padding: 2%;
   font-family: 'Montserrat'
 }
 
@@ -372,14 +377,30 @@ footer{
 }
 
 .sponsor-button{
-  background-color:#444343 ;
-  border: 0px;
   color: white;
+  background-color: #ba9765;
+	border-color: #ba9765 !important;
+  padding: 3%;
   margin: 8px;
   padding-left: 15px;
   padding-right: 15px;
   font-size: 0.9em;
 }
+
+.sponsor-button:hover {
+  border: none;
+  color :gray;
+  background-color: transparent !important;
+}
+.sponsor-button:focus {
+  color :gray;
+  background-color:transparent  !important;
+}
+.sponsor-button:active {
+  color: gray;
+  background-color: transparent !important;
+}
+
 
 .follow {
   font-size: 0.8em;
@@ -390,16 +411,32 @@ footer{
 }
 
 .follow-contact{
-  margin: 8px;
-  padding-left: 15px;
-  padding-right: 15px;
+  border: 0.5px solid;
+  border-color:  gray;
+  background-color: white;
   font-size: 0.8em;
-  font-family: 'Montserrat';
-  padding-top: 5px;
-  padding-bottom: : 5px;
+  display:inline-block;
+  padding: 3%;
 
 
 }
+
+.follow-contact:hover {
+  border: none;
+  color :gray;
+  background-color: transparent !important;
+}
+.follow-contact:focus {
+  color :gray;
+  background-color:transparent  !important;
+}
+.follow-contact:active {
+  color: gray;
+  background-color: transparent !important;
+}
+
+
+
 .nav-link {
   color: inherit;
 }
@@ -417,6 +454,16 @@ footer{
 #gallery-nav{
   border-bottom: 3px solid #444343 ;
 }
+
+/* TABS */
+
+.tab-stl{
+  font-size: 1.1em;
+  font-weight: normal;
+  letter-spacing: 0.2em;
+  color: gray;
+}
+
 
 /* ABOUT */
 
@@ -1024,13 +1071,11 @@ input:focus {
   display: none;
 }
 
-.sticky{
-  position:sticky;
-}
 
 .feed-back{
  z-index: -1;
- background-color:#F7F6F5  ;
+ background-color:#EEEEEE ;
+
 }
 .feed-name{
   letter-spacing: 0.3em;
@@ -1087,7 +1132,7 @@ input:focus {
   padding: 5%;
   border:1px ;
   -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.2), 0 0 0px rgba(0, 0, 0, 0.1) inset;
-  margin: 2%;
+  margin: 3%;
 
 }
 
@@ -1204,6 +1249,7 @@ textarea{
 }
 .tag-cont{
   margin: 5%;
+  padding: 2%;
 }
 
 
