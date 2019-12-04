@@ -22,7 +22,7 @@
 
 
 
-            <div class="">
+            <div >
               <div class="profile-pic">
                 <img src="/img/profilepic.png" class="img-fluid" alt="">
               </div>
@@ -36,17 +36,17 @@
                 <a href="https://www.wetanz.com/">www.wetanz.com/</a>
               </div>
 
+
+
               <div class="profile-button">
 
               <button type="button" name="button"class="btn btn-outline-secondary sponsor-button">Sponsor</button>
 
               </div>
 
-              <div class="follow">
+                <div class="follow-container">
 
-              </div>
-
-              <div class="profile-button ">
+              <div class="follow-b">
                 <form action="{{ route('user.follow', $user->id) }}" method="post">
                   @csrf
 
@@ -56,34 +56,52 @@
                     Follow
                   </button>
                 </form>
+              </div>
 
 
-                  <a href="{{ route('user.unfollow', $user->id )}}"><button type="button" name="button"      class=" follow-contact ">unfollow</button></a>
+
+
+
+                <div class="follow-b">
+                  <form action="{{ route('user.unfollow', $user->id )}}" method="post">
+                    @csrf
+
+                    <button
+                      type="submit"
+                      class=" follow-contact">
+                      Unfollow
+                    </button>
+                  </form>
+
 
                 </div>
 
+                  </div>
 
 
 
-  <div class="about-user">
 
-    <div class="about">
-      <p class="about-title">About</p>
-      <p>  {{ $user->about}} </p>
+  <div class="profile-cont">
+
+    <div  class="profile-about" >
+      <p>About</p>
+      <p class="about-p">  {{ $user->about}} </p>
+      <p> </p>
     </div>
 
-    <div class="abilities">
-      <p class="about-title">abilities</p>
+    <div class="profile-about">
+      <p >abilities</p>
       <p>  {{ $user->skills}}</p>
 
     </div>
 
-    <div class="social-contact">
-
-      <a href="#"><i  class=" icons fab fa-twitter"></i></a>
-      <a href="#"><i class="icons fab fa-facebook-f"></i></a>
-      <a href="#"><i class=" icons fab fa-instagram"></i></a>
-
+    <div  class=" profile-about">
+      <p>Also find me</p>
+      <div class="sc-cont">
+      <a href="#"><i  class=" sc icons fab fa-twitter"></i></a>
+      <a href="#"><i class=" sc icons fab fa-facebook-f"></i></a>
+      <a href="#"><i class=" sc  icons fab fa-instagram"></i></a>
+    </div>
     </div>
 
   </div>
