@@ -8,9 +8,12 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Post;
 use App\Campaigns;
 
+
 class User extends Authenticatable
 {
     use Notifiable;
+
+    
 
     public function Posts (){
       return $this->hasMany(Post::class);

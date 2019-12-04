@@ -111,4 +111,20 @@ class PostsController extends Controller
     {
         //
     }
+
+    public function isLikedByMe($id)
+{
+    $post = Post::findOrFail($id)->first();
+    if (Like::whereUserId(Auth::id())->wherePostId($post->id)->exists()){
+        return 'true';
+    }
+    return 'false';
+}
+
+
+
+
+
+
+
 }
