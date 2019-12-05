@@ -9,14 +9,14 @@
           <div class="intro">
 
 
-            <div class="row">
-              <div class="col-10">
-                  <p class="community-p">A community of creative makers for those ones who still believe in  <i>the power of art</i></p>
-              </div>
-            </div>
+            <div class="row-6">
+              <div class= "col-10">
+                <p class="community-p">A community of creative makers for  those ones who still believe in  <i>the power of art</i></p>
 
             </div>
 
+            </div>
+</div>
 
             <div class="plexus">
 
@@ -24,14 +24,20 @@
                 <div class="col-3">
                   <img class="whales"src="img/whales.jpg" alt="">
                 </div>
+
+
+
                 <div class="col-3">
                   <img  class="woman" src="img/woman.jpg" alt="">
                 </div>
+
+
                 <div class="col-3">
                   <img  class="dreams" src="img/deepdeream.jpg" alt="">
                 </div>
-                  </div>
+
               </div>
+</div>
 
 
     </header> -->
@@ -47,6 +53,9 @@
 
 
     <!-- WHAT ARE YOU UP TO? -->
+
+<div class="row-5">
+  <div class="col">
     <div class="up-to">
 
       <p class="up-to-p">What are you up to?</p>
@@ -55,7 +64,9 @@
 
 
       <button class="up-to-button" type="button" name="button"> Sign up and get involved</button>
-
+    </div>
+    </div>
+</div>
 
       <div class=" up-to-container row">
 

@@ -103,39 +103,40 @@ a:hover {
   width: 100%;
   position:relative;
   z-index: -1;
-  margin: 0px;
+  margin: auto;
 }
 
 
 /* VIDEO INTRO */
 
-p.apeiron-p{
-  font-family:"Montserrat";
-  font-weight: 100;
-  font-size: 2.3em ;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 8px;
-  padding-top: 20px;
-  margin: -5px;
-}
+ p.apeiron-p{
+font-family:"Montserrat";
+ font-weight: 100;
+font-size: 2.3em ;
+ text-transform: uppercase;
+ text-align: center;
+ letter-spacing: 8px;
+ padding-top: 20px;
+ margin: -5px;
+ }
 
-p.everything-p{
-  font-family: "Montserrat";
-  font-weight: normal;
-  font-size: 0.6em;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing:2.5px;
-  padding: 5px;
-  margin:-5px;
-  color: #ededed;
+ p.everything-p{
+    font-family: "Montserrat";
+    font-weight: normal;
+    font-size: 0.6em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing:2.5px;
+    padding: 5px;
+    margin:-5px;
+    color: #ededed;
 
-}
+ }
 
 
 .community-p{
-  display: none;
+
+  display: block;
 }
 
 .sign-in{
@@ -171,7 +172,7 @@ p.everything-p{
   width: 120%;
   top:90%;
   left: -20%;
-  opacity: 0.8;
+  opacity: 0.1;
 }
 
 .woman{
@@ -181,7 +182,8 @@ p.everything-p{
   width: 120%;
   top:150%;
   left: 50%;
-  opacity: 0.8;
+  opacity: 0.3;
+  height: inherit;
 }
 
 .dreams{
@@ -189,7 +191,7 @@ p.everything-p{
   width: 120%;
   top: 60%;
   right: -110%;
-  opacity: 0.8;
+  opacity: 0.6;
   padding: 0px;
 }
 
@@ -629,7 +631,7 @@ font-family: Montserrat;
     display: block;
     font-family: "Montserrat";
     font-weight: 500;
-    font-size: 9.5em;
+    font-size: 7em;
     text-align: left;
     padding: 4%;
   }
@@ -745,6 +747,8 @@ font-family: Montserrat;
   .popular-projects{
     padding: 8%;
     background-color: black;
+    width: auto;
+
   }
 
  .popular-p{
@@ -783,7 +787,7 @@ font-family: Montserrat;
 .up-to-container{
   padding-left:8%;
   padding-right:8%;
-  padding-top: 4%;
+  padding-top: 8%;
   padding-bottom: 4%;
 
 }
@@ -818,7 +822,8 @@ font-family: Montserrat;
   text-align: center;
   letter-spacing: 0.2em;
   font-size: 1.2em;
-  color:  #ba9765;
+  color:  #d18d2e;
+
 }
 
 /* FELLINGS */
