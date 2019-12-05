@@ -40,8 +40,12 @@ a:hover {
 .navbar-dark .navbar-nav .nav-link {
     color: #E0E2EF   ;
     font-weight: lighter;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.2em;
     text-transform: capitalize;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
 
 }
 .navbar{
@@ -49,14 +53,14 @@ a:hover {
   padding-right: 6%;
   padding-top: 1%;
   padding-bottom: 1%;
-  background-color: rgba(0,0,0,.0) !important;
-  text-transform: lowercase;
+  background-color: #201E1E !important;
+  text-transform: uppercase;
   font-size: 1.2em;
-  letter-spacing: 2px;
+  letter-spacing: 0.2em;
 
-  /* -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; */
+  box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
 .navbar-toggler.navbar-toggler-icon{
@@ -67,12 +71,13 @@ a:hover {
 
 .navbar .dropdown-menu{
   border: none;
-  background-color:rgba(0,0,0,.0);
+  background-color:white;
   text-transform: lowercase;
   color:black;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 .dropdown-item:focus{
-  background-color: rgba(0, 0, 0, 0.2);
+
 }
 
 
@@ -378,6 +383,14 @@ div.container{
   text-transform: uppercase;
 }
 
+
+.follow-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .sponsor-button{
   color: white;
   background-color: #ba9765;
@@ -413,16 +426,22 @@ div.container{
 }
 
 .follow-contact{
-  border: 0.5px solid;
-  border-color:  gray;
+  border: 0.2px solid;
+  border-color:  #EEEEEE;
   background-color: white;
   font-size: 0.8em;
   display:inline-block;
-  padding: 3%;
-
-
+  margin: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 0.9em;
 }
 
+.follow-b{
+  margin: 3%;
+}
 .follow-contact:hover {
   border: none;
   color :gray;
@@ -893,7 +912,27 @@ font-family: Montserrat;
 
 /* ABOUT */
 
+.about-p p{
+  text-align: justify;
+  font-size: 0.9em;
+  color: gray
+}
+.profile-about{
+  font-size: 0.8em;
+  font-weight: bold;
+  padding-top:4%;
+  padding-bottom: 2%;
+  text-transform: uppercase;
+  color: gray;
+}
 
+.profile-about p{
+  text-align: left;
+}
+
+.profile-cont{
+  padding: 10%;
+}
 .about-title{
    font-weight: bold;
    text-align: left;
@@ -1015,6 +1054,21 @@ padding: 2%;
 
 
 }
+.sc{
+  color: gray;
+  padding: 2%;
+  font-size: 20px;
+
+}
+
+.sc-cont{
+  padding-top: 1%;
+  padding-bottom: 2%;
+}
+
+.sc:hover{
+  color:#ba9765;
+}
 
 .boton-post{
   text-transform: uppercase;
@@ -1079,7 +1133,7 @@ input:focus {
 
 .feed-back{
  z-index: -1;
- background-color:#EEEEEE ;
+ background-color: #EEEEEE;
 
 }
 .feed-name{
@@ -1130,10 +1184,20 @@ input:focus {
   padding: 3%;
 
 }
-.feed{
+
+.sticky-top{
+  background-color:white !important ;
   color: black ;
   z-index: 1;
-  background-color:white;
+  padding: 5%;
+  border:1px ;
+    -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.2), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+  margin: 3%;
+}
+.feed{
+  background-color:white !important ;
+  color: black ;
+  z-index: 1;
   padding: 5%;
   border:1px ;
   -webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.2), 0 0 0px rgba(0, 0, 0, 0.1) inset;
