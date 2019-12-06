@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('user.search');
 });
 
+
+
+//Search
+Route::get('/search','SearchController@index');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

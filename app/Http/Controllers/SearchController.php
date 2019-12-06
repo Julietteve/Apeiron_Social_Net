@@ -3,22 +3,29 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
-use Auth;
+use App\User;
 
-class PostsController extends Controller
+class SearchController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-      $posts= Post::all();
-        return view('home.feed',[
-            'posts'=>$posts,
-          ]);
+      if ($request->has('q')) {
+          $users = User::where('name', 'like', '%' . $request->get('q') . '%')
+              ->paginate(10)
+              ->appends($request->only('q'));
+      } else {
+          $users = User::paginate(10)->appends($request->only('q'));
+      }
+
+
+      return view('search.index', [
+          'users' => $users,
+      ]);
     }
 
     /**
@@ -28,7 +35,7 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('home.feed');
+        //
     }
 
     /**
@@ -39,33 +46,8 @@ class PostsController extends Controller
      */
     public function store(Request $request)
     {
-      $this->validate($request,
-      [
-            'post_text' => 'required',
-            'post_image' => ['file','image','required'],
-      ],
-      );
-
-
-        $newPost= new Post;
-
-        $newPost->post_text=$request->post_text;
-
-
-        // dd($request->file('post_image'));
-        $path = $request->file('post_image')->store('public');
-        $file=basename($path);
-
-        $newPost->post_image=$file;
-        $newPost->user_id = Auth::user()->id;
-
-        $newPost->save();
-
-
-
-        return redirect('post');
+        //
     }
-
 
     /**
      * Display the specified resource.
@@ -75,7 +57,7 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-          return $post;
+        //
     }
 
     /**
@@ -98,7 +80,7 @@ class PostsController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        //
     }
 
     /**
@@ -111,12 +93,4 @@ class PostsController extends Controller
     {
         //
     }
-
-    
-
-
-
-
-
-
 }

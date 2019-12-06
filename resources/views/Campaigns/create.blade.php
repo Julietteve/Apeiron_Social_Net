@@ -52,7 +52,7 @@
                       <label for="file-input">
                         Name of the Campaign
                      </label>
-                      <input class="pic-up" id="file-input" type="text" name="post_image" value="">{{ $errors->first('post_image') }}
+                      <input class="pic-up" id="file-input" type="text" name="campaign_name" value="">{{ $errors->first('campaign_name') }}
                     </div>
 
 
@@ -60,7 +60,7 @@
                       <label for="file-input">
                         <div class="img-cont"><img class="upload_icon img-fluid" src="/img/triangle-upload.png"/>  <p class="here">Upload your files here</p> </div>
                      </label>
-                      <input class="pic-up" id="file-input" type="file" name="post_image" value="">{{ $errors->first('post_image') }}
+                      <input class="pic-up" id="file-input" type="file" name="campaign_image" value="">{{ $errors->first('campaign_image') }}
 
 
                     </div>
@@ -71,16 +71,10 @@
                       <label for="file-input">
                         Description
                      </label>
-                      <input class="pic-up" id="file-input" type="text" name="post_image" value="">{{ $errors->first('post_image') }}
+                      <input class="pic-up" id="file-input" type="text" name="campaign_description" value="">{{ $errors->first('campaign_description') }}
 
                     </div>
 
-                    <div >
-                      <label for="file-input">
-                        Tags
-                     </label>
-                      <input class="pic-up" id="file-input" type="text" name="post_image" value="">{{ $errors->first('post_image') }}
-                    </div>
 
 
 

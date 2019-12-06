@@ -46,13 +46,19 @@
 
 <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <nav class="navbar navbar-dark bg-dark">
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
-            </nav>
-            </li>
+
+          <form action="/search" method="get" >
+          
+              <div class="input-group">
+                <input type="text" name="q" placeholder="Search..." value="{{ request('q') }}"> <span class="input-group-btn">
+              </div>
+          </form>
+
+
+
+
+
+
             <li class="nav-item">
               @guest
                   <li class="nav-item">

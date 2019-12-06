@@ -43,8 +43,8 @@ class CampaignController extends Controller
     public function store(Request $request)
     {
       $this->validate($request,
-      [
-            'campaign_text' => 'required',
+      [     'campaign_name' => 'required',
+            'campaign_description' => 'required',
             'campaign_image' => ['file','image','required'],
       ],
       );
@@ -55,7 +55,6 @@ class CampaignController extends Controller
         $newPost->campaign_text=$request->campaign_text;
 
 
-        // dd($request->file('post_image'));
         $path = $request->file('campaign_image')->store('public');
         $file=basename($path);
 
@@ -66,7 +65,7 @@ class CampaignController extends Controller
 
 
 
-        return redirect('campaigns');
+        return redirect('/profiles/{id}');
     }
 
 
