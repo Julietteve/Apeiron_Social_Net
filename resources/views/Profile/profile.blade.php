@@ -137,7 +137,7 @@
         <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Campaigns
 
 
-          <div class="row">
+          <!-- <div class="row">
 
           <article class="col-12 col-md-8 col-lg-6">
               <a data-fancybox="gallery" href="/img/example.jpg"><img class= "img-thumbnail img-fluid  home-article gallery-item "src="/img/example.jpg"></a>
@@ -162,7 +162,9 @@
               <a data-fancybox="gallery" href="/img/example.jpg"><img class= "img-thumbnail img-fluid  home-article gallery-item "src="/img/example.jpg"></a>
           </article>
 
-          </div>
+          </div> -->
+
+
 
 
 

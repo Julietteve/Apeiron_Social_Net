@@ -46,7 +46,7 @@ Route::delete('/post/{id}', 'PostsController@destroy'); // borrar 1 solo post
 // campaings
 Route::get('/campaigns', 'CampaignController@index'); // listar todos los campaigns
 Route::get('/campaigns/new', 'CampaignController@create'); // mostrar formulario de alta
-Route::post('/campaigns', 'CampaignController@store'); // guardar los datos del form
+Route::post('/campaings', 'CampaignController@store'); // guardar los datos del form
 Route::get('/campaigns/{id}/edit', 'CampaignController@edit'); // mostrar formulario de edicion
 Route::patch('/campaigns/{id}', 'CampaignController@update'); // guardar los datos editados
 Route::get('/campaigns/{id}', 'CampaignController@show'); // ver 1 solo post

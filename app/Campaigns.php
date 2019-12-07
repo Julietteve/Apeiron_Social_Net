@@ -13,7 +13,7 @@ class Campaigns extends Model
 
 
   protected $fillable = [
-      'campaign_text',
+      'campaign_description',
       'campaign_image',
      ];
 

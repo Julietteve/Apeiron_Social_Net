@@ -44,7 +44,7 @@
 
               <div class="col-12">
 
-                <form action="/Campaign" method="post" enctype="multipart/form-data" name="cargaPost">
+                <form action='/campaings' method="post" enctype="multipart/form-data" name="cargaPost">
                     @csrf
 
 
@@ -56,18 +56,21 @@
                     </div>
 
 
+
                     <div class="image-upload">
+                      <form class="" action="index.html" method="post">
+                        @csrf
+
                       <label for="file-input">
                         <div class="img-cont"><img class="upload_icon img-fluid" src="/img/triangle-upload.png"/>  <p class="here">Upload your files here</p> </div>
                      </label>
                       <input class="pic-up" id="file-input" type="file" name="campaign_image" value="">{{ $errors->first('campaign_image') }}
-
-
                     </div>
 
 
 
                     <div >
+
                       <label for="file-input">
                         Description
                      </label>
@@ -75,12 +78,7 @@
 
                     </div>
 
-
-
-
-
-
-                        <button class="btn-primary custom-btn">Post</button>
+                        <button type="submit" class="btn-primary custom-btn">Post</button>
                 </form>
 
 

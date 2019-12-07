@@ -44,22 +44,22 @@ class CampaignController extends Controller
     {
       $this->validate($request,
       [     'campaign_name' => 'required',
-            'campaign_description' => 'required',
-            'campaign_image' => ['file','image','required'],
+            'description' => 'required',
+            'campaign_image' => ['file','image'],
       ],
-      );
+    );
 
 
-        $newCampaign= new Campaign;
+        $newCampaign= new Campaigns;
 
-        $newPost->campaign_text=$request->campaign_text;
+        $newCampaign->description=$request->description;
 
+        // $path = $request->file('campaign_image')->store('public');
+        // $file=basename($path);
 
-        $path = $request->file('campaign_image')->store('public');
-        $file=basename($path);
-
-        $newCampaign->campaign_image=$file;
+        // $newCampaign->campaign_image=$file;
         $newCampaign->user_id = Auth::user()->id;
+
 
         $newCampaign->save();
 

@@ -48,7 +48,7 @@
         <ul class="navbar-nav ml-auto">
 
           <form action="/search" method="get" >
-          
+
               <div class="input-group">
                 <input type="text" name="q" placeholder="Search..." value="{{ request('q') }}"> <span class="input-group-btn">
               </div>
