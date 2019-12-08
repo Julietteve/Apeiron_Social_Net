@@ -15,5 +15,7 @@ $factory->define(User::class, function (Faker $faker) {
       "about"=> $faker ->text($maxNbChars = 100),
       "skills"=> $faker ->text($maxNbChars = 5),
       "profile_pic"=> $faker -> imageUrl($width = 180, $height = 180),
+      "banner_pic"=> $faker -> imageUrl($width = 1980, $height = 420),
+
     ];
 });

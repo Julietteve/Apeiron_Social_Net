@@ -104,69 +104,6 @@
     </div>
 
 
-<!-- POPULAR PROJECTS -->
-
- <section>
-
-   <div class="popular-projects">
-
-     <p class="popular-p">Popular Projects</p>
-
-     <div class="card-deck ">
-
-  <div class="card">
-    <img src="img/broken.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="img/broken.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="img/broken.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="img/broken.png" class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-
-
-
-
-    </div>
-</div>
-   </div>
- </section>
-
-
 
       <!-- FELLINGS -->
 
@@ -175,13 +112,13 @@
               <div class="feeling-container col-6">
                   <p class="feeling-p"> <i> feeling creative?</i> </p>
                     <img class="img-fluid feeling-img"src="img/circle.png" alt="">
-                    <button  class="feeling-button" button= name" button">Sponsor a Campaign</button>
-              </div>
+                  <a href="/login"> <button  class="feeling-button" button= name" button">Sign In</button>
+              </div></a>
 
                 <div class="feeling-container col-6">
                   <p class="feeling-p"> <i>feeling curious? </i></p>
                   <img class="img-fluid feeling-img" src="img/geometric_heart.png" alt="">
-                  <div class=""><button class="feeling-button"type="button" name="button">Take a Look</button>
+                  <a href="/register"> <div class=""><button class="feeling-button"type="button" name="button">Register</button></a>
                 </div>
           </div>
       </div>

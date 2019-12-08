@@ -4,15 +4,29 @@
 @section('content')
 
 
-<ul>
-
-
     @foreach ($users as $user)
-        <li>{{ $user->name }}</li>
-          <li>{{ $user->country }}</li>
+
+<div style=" background-color:#ecf4f4"class="container-fluid">
+
+
+  <a href="/profiles/{{ $user->id }}">
+          <div class="card" style="width: 18rem;">
+         <img src=" {{ $user->profile_pic }}" class="card-img-top" alt="...">
+          <div class="card-body">
+            {{ $user->name }}
+            <p class="card-text">
+              {{ $user->category }}
+            </p>
+          </div>
+        </div>
+      </a>
+
+</div>
+
+
 
     @endforeach
-</ul>
+
 
 {{ $users->links() }}
 
