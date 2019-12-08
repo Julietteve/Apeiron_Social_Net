@@ -27,7 +27,8 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
       <!-- Google Fonts CSS -->
-      <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+      <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet"> -->
+      <link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -36,7 +37,11 @@
 
   <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
 
-  <a class="navbar-brand" href="/post"><img  class="img-responsive logo" src="/img/apeiron_logo.png" alt=""></a>
+  <a class="navbar-brand" href="/post">
+
+  <img class="logo" src="/img/apeiron_logo.png" alt="">
+
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" arias-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -47,12 +52,17 @@
 <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
 
-          <form action="/search" method="get" >
 
-              <div class="input-group">
-                <input type="text" name="q" placeholder="Search..." value="{{ request('q') }}"> <span class="input-group-btn">
-              </div>
-          </form>
+
+
+          <div class="box">
+            <form action="/search" method="get" >
+              <div class="container-1">
+                <span class="icon"><i class="fa fa-search"></i></span>
+                <input name="q" placeholder="Search..." value="{{ request('q') }}" type="search" id="search" placeholder="Search..." />
+                </div>
+            </form>
+          </div>
 
 
 
@@ -76,11 +86,15 @@
                       </a>
 
                           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <div class="">
+                              <img src="storage/{{Auth::user()->profile_pic}}" alt="">
                               <a class="dropdown-item" href="{{ route('logout') }}"
                                  onclick="event.preventDefault();
                                                document.getElementById('logout-form').submit();">
                                   {{ __('Logout') }}
                               </a>
+                            </div>
+
 
 
                           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

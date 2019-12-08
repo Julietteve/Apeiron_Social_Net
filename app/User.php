@@ -13,7 +13,7 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-    
+
 
     public function Posts (){
       return $this->hasMany(Post::class);
@@ -24,7 +24,7 @@ class User extends Authenticatable
     }
 
     protected $fillable = [
-        'name', 'email', 'password', 'nickname', 'country'
+        'name', 'email', 'password', 'nickname', 'country','profile_pic'
     ];
 
     /**
