@@ -4,7 +4,7 @@
 
 body{
   box-sizing: border-box;
-  font-family: 'Alatsi',
+  font-family: 'Alatsi';
 }
 
 li{
@@ -1154,17 +1154,29 @@ input.posting{
   color:#ba9765;
 }
 
-button.boton-post{
-  text-transform: capitalize;
-  padding:1%;
-  background-color:#f24534;
-  border: none;
-   box-sizing: border-box;
-   text-decoration:none;
-   text-transform:uppercase;
-   color:white;
-   
+.file-input{
+font-size: 1.3em;}
+
+i {
+  margin-right: 20px;
+  opacity: 0.8;
 }
+
+.boton-post button{
+ padding:0.5em 3em;
+ margin:0 0.3em 0.3em 0;
+  text-transform: capitalize;
+  background-color:#f24534;
+  color: white;
+  border: none;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-size: 1.2em;
+  float: right;
+
+}
+
+
 
 label{
   width: auto;
