@@ -4,28 +4,41 @@
 @section('content')
 
 
-    @foreach ($users as $user)
-
-<div style=" background-color:#ecf4f4"class="container-fluid">
+<div class="all">
 
 
-  <a href="/profiles/{{ $user->id }}">
-          <div class="card" style="width: 18rem;">
-         <img src=" {{ $user->profile_pic }}" class="card-img-top" alt="...">
-          <div class="card-body">
-            {{ $user->name }}
-            <p class="card-text">
-              {{ $user->category }}
-            </p>
-          </div>
-        </div>
-      </a>
+<div class="container-fluid">
+
+  <div class=" card-container row">
+
+      @foreach ($users as $user)
+
+    <div class="col-sm-12 col-lg-3">
+
+          <a href="/profiles/{{ $user->id }}">
+                <div class="card" style="width: 18rem">
+                  <img src=" {{ $user->profile_pic }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <p class=" c-name card-text">{{ $user->name }}</p>
+                 <p class=" c-country card-text">{{ $user->country }}  </p>
+                 <p class="card-text">{{ $user->category }}  </p>
+              </div>
+            </div>
+          </a>
+    </div>
+      @endforeach
+
+
+
+  </div>
+
+
+
 
 </div>
 
 
-
-    @endforeach
+</div>
 
 
 {{ $users->links() }}

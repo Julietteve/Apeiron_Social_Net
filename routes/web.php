@@ -27,10 +27,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 //profile
 Route::post('follows/{profileId}', 'ProfileController@followUser')->name('user.follow');
 Route::delete('follows/{profileId}', 'ProfileController@unFollowUser')->name('user.unfollow');
+Route::get( '/profile/{id}/edit', 'ProfileController@edit');
 
 
 // users
-Route::get('/profiles/{id}', 'UserController@index'); //ver perfil
+Route::get('/profile/{id}', 'UserController@index'); //ver perfil
 
 
 

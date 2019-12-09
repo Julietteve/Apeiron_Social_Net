@@ -1,10 +1,9 @@
 * {
-  border-radius: 0 !important;
+  font-family:'Alatsi';
 }
 
 body{
-  box-sizing: border-box;
-  font-family: 'Alatsi';
+    box-sizing: border-box;
 }
 
 li{
@@ -1163,6 +1162,7 @@ button.boton-post{
 
 
 
+
 label{
   width: auto;
 }
@@ -1277,19 +1277,46 @@ font-size: 0.9em;
 
 }
 
+.inner-div{
+  border: solid 1px #e9f2fc  ;
+}
+
+.inner-comment{
+  border: solid 1px #e9f2fc  ;
+  height: 3vh;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
 textarea.comment{
-  width: 100%;
+  padding: 2%;
+  width: 85%;
+  display:inline;
+  float: left;
+   margin-left: auto;
+   margin-right: auto;
   max-width: 500px;
   height: 10vh;
   box-sizing: border-box;
-  border:  #f4f4f6 solid 1px;
-  padding: 2%;
+  border: #e9f2fc solid 1px;
   display: inline-block;
   box-sizing: border-box;
   background-color: white;
+  outline: none;
+  float: right;
 
 }
 
+.comment-pic{
+  float: left;
+  width: 50%;
+  margin: auto;
+border-radius: 50%;
+}
+
+.comment-contains{
+  overflow: hidden;
+}
 
 
 
@@ -1313,10 +1340,11 @@ textarea.comment{
 
 
 .post-description{
-  padding: 3%;
+  padding: 5%;
   text-align: justify;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #566874;
+  line-height: 1.8em;
 }
 
 .reaction-container{
@@ -1393,10 +1421,42 @@ textarea.comment{
 .tag-p{
   font-size: 0.9em;
   color: gray;
-  padding: 1%;
+  padding: 2%;
   text-align: justify;
 }
 
+/*cards*/
+
+.all{
+  background-color:#ecf4f4;
+  padding: 3%;
+}
+.card{
+  margin: 3%;
+  padding: 1%;
+  transform: scale(0.9);
+}
+
+.card:hover{
+  transform: scale(1);
+}
+
+.c-name{
+  font-size: 1.1em;
+  text-align: center;
+
+  color:#44495c;
+  font-weight: bold;
+}
+
+.c-country{
+  font-size: 1em;
+  text-align: center;
+  color: #8b91a1;
+  padding: 0px;
+  margin :0px;
+
+}
 
 
 /* // Extra large devices (large desktops, 1200px and up) */

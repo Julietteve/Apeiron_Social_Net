@@ -20,19 +20,22 @@
   <div class="row rounded profile-data">
   <div class=" col-12 ">
 
+  <a href= '/profile/{id}/edit'><span style="float:right; opacity:0.4"class="icon"><i class="fas fa-edit"></i></span></a>
+
 
 
             <div >
               <div class="profile-pic">
-                <img src="{{Auth::user()->profile_pic}}" class="img-fluid" alt="">
+                <img style="border-radius: 50%" src="{{Auth::user()->profile_pic}}" class="img-fluid" alt="">
               </div>
 
               <div class="user-name">
-                <p >{{Auth::user()->nickname}}</p>
+                <p >{{ $user->nickname }}</p>
               </div>
 
               <div class="profession">
                 <p style="font-size:0.9em; text-transform:capitalize; padding:1%"> {{ $user->category}} </p>
+
                 <p style="font-size:0.8em"> {{ $user->country}} </p>
               </div>
 
