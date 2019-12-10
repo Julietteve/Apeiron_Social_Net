@@ -86,7 +86,7 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -107,12 +107,19 @@ class PostsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request )
+
     {
-        //
+        $id= $request['id'];
+
+        $postDeleted= Post:: find($id);
+
+        $postDeleted->delete();
+
+        return redirect('/post');
     }
 
-    
+
 
 
 

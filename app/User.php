@@ -14,13 +14,8 @@ class User extends Authenticatable
     use Notifiable;
 
 
-
     public function Posts (){
       return $this->hasMany(Post::class);
-    }
-
-    public function Campaigns (){
-      return $this->hasMany(Campaigns::class);
     }
 
     protected $fillable = [
