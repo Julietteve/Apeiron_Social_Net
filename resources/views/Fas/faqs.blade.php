@@ -1,12 +1,11 @@
 @extends('layouts.header')
 
-  <title>F.A.Qs</title>
-
-</head>
-<body>
+@section('content')
 
 
-    <a name="top"></a>
+
+
+
 
 
   <div class="container-fluid1 p-3 mb-2">
@@ -204,8 +203,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.beefup.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/jquery.beefup.min.js"></script>
 
 
 <!-- Beefup -->
@@ -215,6 +214,9 @@
   });
 </script>
 
-</body>
 
-</html>
+
+
+
+
+@endsection

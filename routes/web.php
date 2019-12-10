@@ -27,6 +27,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 //profile
 Route::post('follows/{profileId}', 'ProfileController@followUser')->name('user.follow');
 Route::delete('follows/{profileId}', 'ProfileController@unFollowUser')->name('user.unfollow');
+
 Route::get( '/profile/{id}/edit', 'ProfileController@edit');
 
 
@@ -44,11 +45,8 @@ Route::patch('/post/{id}', 'PostsController@update'); // guardar los datos edita
 Route::get('/post/{id}', 'PostsController@show'); // ver 1 solo post
 Route::delete('/post', 'PostsController@destroy'); // borrar 1 solo post
 
-// campaings
-Route::get('/campaigns', 'CampaignController@index'); // listar todos los campaigns
-Route::get('/campaigns/new', 'CampaignController@create'); // mostrar formulario de alta
-Route::post('/campaings', 'CampaignController@store'); // guardar los datos del form
-Route::get('/campaigns/{id}/edit', 'CampaignController@edit'); // mostrar formulario de edicion
-Route::patch('/campaigns/{id}', 'CampaignController@update'); // guardar los datos editados
-Route::get('/campaigns/{id}', 'CampaignController@show'); // ver 1 solo post
-Route::delete('/campaigns/{id}', 'CampaignController@destroy'); // borrar 1 solo post
+// Contact
+Route::get('/contact', 'ContactController@index');
+
+//FAQs
+Route::get('/faqs', 'FaqsController@index'); 

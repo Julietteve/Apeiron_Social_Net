@@ -81,18 +81,39 @@
                   @endif
               @else
                   <li style="font-size:1em; font-weight:normal" class="nav-item dropdown">
-                      <a sid="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                     <img  style="width:15%; border-radius:50%; display:inline" src="{{Auth::user()->profile_pic}}" alt="">
+                      <a  style="display:inline"sid="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                           {{ Auth::user()->nickname }} <span class="caret"></span>
                       </a>
 
                           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <div class="">
-                              <img src="storage/{{Auth::user()->profile_pic}}" alt="">
-                              <a class="dropdown-item" href="{{ route('logout') }}"
+
+
+
+                              <a class="dropdown-item" href="/profile/{id}">
+                                  {{ __('My profile') }}
+                              </a>
+
+                              <a class="dropdown-item" href="/profile/{id}/edit">
+                                  {{ __('Edit my profile') }}
+                              </a>
+
+                              <a class="dropdown-item" href="/faqs">
+                                  {{ __('F.A.Qs') }}
+                              </a>
+
+                              <a class="dropdown-item" href="/contact">
+                                  {{ __('Contact Us') }}
+                              </a>
+
+                              <a style="color:#f24534" class="dropdown-item" href="{{ route('logout') }}"
                                  onclick="event.preventDefault();
                                                document.getElementById('logout-form').submit();">
                                   {{ __('Logout') }}
                               </a>
+
+
                             </div>
 
 
