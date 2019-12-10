@@ -1216,6 +1216,7 @@ input:focus {
   text-align: center;
   font-weight: bold;
   padding: 2%;
+  font-size: 1.3em;
 }
 
 .feed-pic{
@@ -1246,6 +1247,7 @@ font-size: 0.9em;
   display: inline;
   color: #44495c;
   font-weight: bold;
+  font-size: 1.1em;
 }
 
 .media-div{
@@ -1457,6 +1459,33 @@ border-radius: 50%;
   margin :0px;
 
 }
+
+/* Profile-Update */
+
+.update-pic{
+  border-radius: 50%;
+
+}
+
+textarea:hover,
+input:hover,
+textarea:active,
+input:active,
+textarea:focus,
+input:focus,
+button:focus,
+button:active,
+button:hover,
+label:focus,
+.btn:active,
+.btn.active
+{
+    outline:0px !important;
+    -webkit-appearance:none;
+    box-shadow: none !important;
+}
+
+
 
 
 /* // Extra large devices (large desktops, 1200px and up) */

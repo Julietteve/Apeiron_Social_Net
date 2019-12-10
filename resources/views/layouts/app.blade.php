@@ -16,7 +16,9 @@
     <link rel="stylesheet" href="/css/login.css">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <!-- Google Fonts CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet"> -->
+
+      <link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

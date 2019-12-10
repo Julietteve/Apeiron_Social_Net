@@ -9,23 +9,31 @@
 
         <div class="row">
 
-          <div class="col-sm-12 col-lg-8">
+          <div style="padding:5%" class="col-sm-12 col-lg-4">
 
-            <div style="overflow:hidden">
+            <div >
               <div class="profile-pic">
-                <img style="float:left" style="border-radius: 50%" src="{{Auth::user()->profile_pic}}" class="img-fluid" alt="">
+                <img  style="border-radius: 50%; margin:5%;display: flex;justify-content: center" src="{{Auth::user()->profile_pic}}" class="img-fluid update-pic" alt="">
               </div>
-              <div class="">
-                <button style="float:right" type="button" name="button">upload Profile Pic</button>
+              <div style="display: flex;justify-content: center;margin:5%">
+                <button class="rounded boton-post"style="font-size:1em" type="button" name="button">Update Profile Pic</button>
               </div>
           </div>
 
-          <form>
+          </div>
+
+          <div style="padding:5%"class="col-sm-12 col-lg-8">
+
+            <div class="">
+              <p style="font-size:2em; color:#f24534">{{Auth::user()->name}}</p> <p style="font-size:1.3em; color:#44495c padding:5%">/ Edit Profile</p>
+            </div>
+
+          <form >
             <div class="form-row">
-              <div class="form-group col-md-6">
+              <div class="form-group col-12">
                 <input placeholder="Name" type="email" class="form-control" id="inputEmail4">
               </div>
-              <div class="form-group col-md-6">
+              <div class="form-group col-12">
                 <input placeholder="Nickname"type="password" class="form-control" id="inputPassword4">
               </div>
             </div>
@@ -33,7 +41,7 @@
               <input placeholder="Country or City" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
             </div>
             <div class="form-row">
-              <div class="form-group col-md-4">
+              <div class="form-group col-12">
                 <label for="inputState">I am a ...</label>
                 <select id="inputState" class="form-control">
                   <option selected>Choose...</option>
@@ -45,16 +53,17 @@
                   <option>Film Maker</option>
                 </select>
               </div>
-              <div class="form-group col-md-2">
+              <div class="form-group col-12">
                 <input style="height:20vh" placeholder="About me"type="text" class="form-control" id="inputZip">
               </div>
 
-              <div class="form-group col-md-2">
+              <div class="form-group col-12">
                 <input placeholder="Skills"type="text" class="form-control" id="inputZip">
               </div>
             </div>
 
-            <button type="submit" class="btn btn-primary">Save</button>
+
+            <button style="padding:2%; width:10%; float:left"type="submit" class="rounded boton-post">Save</button>
           </form>
 
 
@@ -86,7 +95,7 @@
 
 
 
-
+   @include('layouts.footer')
 
 
 @endsection

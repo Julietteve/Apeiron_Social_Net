@@ -15,7 +15,7 @@
 
     <div class="col-sm-12 col-lg-3">
 
-          <a href="/profiles/{{ $user->id }}">
+          <a href="/profile/{{ $user->id }}">
                 <div class="card" style="width: 18rem">
                   <img src=" {{ $user->profile_pic }}" class="card-img-top" alt="...">
                 <div class="card-body">

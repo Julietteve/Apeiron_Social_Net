@@ -6,7 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Apeiron</title>
 
-      <link rel="shortcut icon" type="image/png" href="img/apeiron_logo.png">
+      <link rel="shortcut icon" type="image/png" href="/img/apeiron_logo.png">
 
 
 
@@ -71,17 +71,17 @@
 
             <li class="nav-item">
               @guest
-                  <li class="nav-item">
+                  <li style="font-size:1em; font-weight:normal" class="nav-item">
                       <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                   </li>
                   @if (Route::has('register'))
-                      <li class="nav-item">
+                      <li style="font-size:1em; font-weight:normal" class="nav-item">
                           <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                       </li>
                   @endif
               @else
-                  <li class="nav-item dropdown">
-                      <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                  <li style="font-size:1em; font-weight:normal" class="nav-item dropdown">
+                      <a sid="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                           {{ Auth::user()->nickname }} <span class="caret"></span>
                       </a>
 

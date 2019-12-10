@@ -3,16 +3,16 @@
 @section('content')
 <div class="container-fluid">
 <div class=" row">
-  <div class=" login-cont col-6">
+  <div class=" login-cont col-6 d-none d-lg-block ">
 
     <div class="">
 
-        <img class="img-logic img-fluid"src="img/tania.jpg" alt="">
+        <img class="img-logic img-fluid"src="img/fly.png" alt="">
     </div>
 
     <div class="show-up">
 
-      <h2 class="Journey"> Join the Journey. Make an impact</h2>
+      <h2 style="color:#ecf4f4"class="Journey"> Join the Journey. Make an impact</h2>
 
     </div>
 
@@ -20,7 +20,6 @@
 
         <p> 'You gotta show up if you wanna be seen'</p>
 
-        <img class="logo "src="/img/apeiron_logo.png" alt="">
 
     </div>
 
@@ -29,7 +28,7 @@
 
 
 
-  <div class=" t col-6">
+  <div class=" col-lg-6">
 
 
 
@@ -53,7 +52,12 @@
 
                       <div class="col-md-6">
 
-                        <h2 class="log-in-title">Register</h2>
+                        <div style="display: flex;
+                        justify-content: center;">
+                          <img class="logo image-fluid "src="/img/apeiron_logo.png" alt="">
+                        </div>
+
+                        <h2 style="text-align:center"class="log-in-title">Register</h2>
                         <p class="register-a"> Keep on moving. </p>
                         <a class="register-color" href="/login">Log In</a>
 

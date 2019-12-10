@@ -4,16 +4,16 @@
 
 <div class="container-fluid">
 <div class=" row">
-  <div class=" login-cont col-6">
+  <div class=" login-cont col-7 d-none d-lg-block ">
 
     <div class="">
 
-        <img class="img-logic img-fluid"src="img/woman.jpg" alt="">
+        <img class="img-logic img-fluid"src="img/jump.png" alt="">
     </div>
 
     <div class="show-up">
 
-      <h2 class="Journey"> Join the Journey. Make an impact</h2>
+      <h2 style="color:#ecf4f4" class="Journey"> Join the Journey. Make an impact.</h2>
 
     </div>
 
@@ -21,7 +21,7 @@
 
         <p> 'You gotta show up if you wanna be seen'</p>
 
-        <img class="logo "src="/img/apeiron_logo.png" alt="">
+
 
     </div>
 
@@ -30,14 +30,14 @@
 
 
 
-  <div class=" t col-6">
+  <div class=" container-form col-lg-5">
 
 
 
 
     <div class="row justify-content-center">
 
-        <div class="col-md-12  align-self-center">
+        <div class="col-lg-12  align-self-center">
 
             <div >
                 <div class="card-body">
@@ -45,14 +45,18 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="email"  class="col-md-4 col-form-label text-md-right"></label>
+
 
                             <div class=" input-data col-md-8">
 
+                              <div style="display: flex;
+                              justify-content: center;">
+                                <img class="logo image-fluid "src="/img/apeiron_logo.png" alt="">
+                              </div>
 
-                              <h2 class="log-in-title">Log In</h2>
+                              <h2 style="text-align:center" class="log-in-title">Log In</h2>
                               <p class="register-a"> Spread and support.  </p>
-                              <a class="register-color" href="/register">Register</a>
+                              <a style="color:#f24534"class="register-color" href="/register">Register</a>
 
 
                                 <div class="input-holder">
@@ -74,7 +78,7 @@
                         <div class="form-group row">
 
 
-                            <label for="password" class="col-md-4 col-form-label text-md-right"></label>
+
 
                             <div class="col-md-8">
 
@@ -94,7 +98,7 @@
 
 
                         <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-6 col-md-4">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -106,7 +110,7 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                            <div class="col-md-8 col-md-4">
 
                               <div class="login-button">
                                 <button type="submit" class=" custom-btn btn btn-primary">
@@ -116,11 +120,7 @@
 
                                 @if (Route::has('password.request'))
 
-                                    <div class="  login-button">
-                                        <a class=" register-color login-password" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                        </a>
-                                    </div>
+
 
                                 @endif
                             </div>
@@ -133,7 +133,7 @@
 </div>
 </div>
 </div>
-<!-- 
+<!--
 <script src="{{ asset ('js/login.js')}}" defer></script> -->
 
 @endsection
