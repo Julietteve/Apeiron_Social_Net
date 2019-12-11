@@ -111,7 +111,7 @@
 <div class="post-container">
 
 
-  @foreach ($posts as $post)
+  @foreach (auth()->user()->posts as $post)
       <div class="feed rounded">
 
 
@@ -141,7 +141,7 @@
         </div>
         </a>
 
-          <a data-fancybox="gallery" src="{{$post->post_image}}"><img style=" width:100% "class= "rounded img-fluid "src="{{$post->post_image}}"></a>
+          <a data-fancybox="gallery" src="/storage/{{$post->post_image}}"><img style=" width:100% "class= "rounded img-fluid "src="/storage/{{$post->post_image}}"></a>
 
         <div class="post-description">{{ $post->post_text }}</div>
 

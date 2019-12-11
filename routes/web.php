@@ -27,12 +27,12 @@ Route::get('/home', 'HomeController@index')->name('home');
 //profile
 Route::post('follows/{profileId}', 'ProfileController@followUser')->name('user.follow');
 Route::delete('follows/{profileId}', 'ProfileController@unFollowUser')->name('user.unfollow');
-
 Route::get( '/profile/{id}/edit', 'ProfileController@edit');
 
 
 // users
 Route::get('/profile/{id}', 'UserController@index'); //ver perfil
+Route::post('profileUpdate','UserController@profileUpdate')->name('profile.update')->middleware('auth');
 
 
 
@@ -49,4 +49,8 @@ Route::delete('/post', 'PostsController@destroy'); // borrar 1 solo post
 Route::get('/contact', 'ContactController@index');
 
 //FAQs
-Route::get('/faqs', 'FaqsController@index'); 
+Route::get('/faqs', 'FaqsController@index');
+
+//contact_team
+
+Route::post('/contact', 'ContactController@store');

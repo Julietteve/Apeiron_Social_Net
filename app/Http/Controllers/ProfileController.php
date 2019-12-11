@@ -14,7 +14,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-
+    
     }
 
     /**
@@ -69,10 +69,19 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+
+      public function ProfileUpdate(Request $request)
+   {
+       // $user= auth()->user();
+       // $data = array_diff($request->all(), $user->toArray());
+       // $data['image'] = $user->image;
+       // if ($request->hasFile('image')) {
+       //     $data['image'] = $request->file('image')->store('users');
+       // }
+       // $update=$user->update($data);
+       // return redirect('profile')->with('status', 'Profile updated!');
+   }
+
 
     /**
      * Remove the specified resource from storage.

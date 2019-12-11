@@ -20,8 +20,8 @@
     </div>
   </div>
   <!-- formulario -->
-  <form action="contacto.php" method="post" enctype="multipart/form-data">
-
+  <form action="/contact" method="post" enctype="multipart/form-data">
+      @csrf
       <div class="form-row">
 
       </div>

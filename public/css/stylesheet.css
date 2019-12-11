@@ -60,7 +60,7 @@ a:hover {
 .navbar{
   padding-left: 6%;
   padding-right: 6%;
-  background-color: #44495C !important;
+  background-color: black !important;
 
 -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
   -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -95,11 +95,11 @@ a:hover {
 .container-1 input#search{
   width: 300px;
   height: 50px;
-  background: #2b303b;
+  background-color:white ;
   border: none;
   font-size: 10pt;
   float: left;
-  color: #63717f;
+  color:black;
   padding-left: 45px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -115,7 +115,9 @@ a:hover {
 
 }
 
-
+.navbar-light .navbar-toggler-icon{
+  filter: brightness(0) invert(1);
+}
 
 
 .container-4 input#search::-webkit-input-placeholder {
@@ -518,16 +520,16 @@ div.container{
 }
 .follow-contact:hover {
   border: none;
-  color :gray;
-  background-color: transparent !important;
+  color :white;
+  background-color: #f24533 !important;
 }
 .follow-contact:focus {
-  color :gray;
-  background-color:transparent  !important;
+  color :white;
+  background-color:#f24533 !important;
 }
 .follow-contact:active {
-  color: gray;
-  background-color: transparent !important;
+  color: white;
+  background-color: #f24533 !important;
 }
 
 

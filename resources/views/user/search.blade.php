@@ -54,19 +54,6 @@
 
     <!-- WHAT ARE YOU UP TO? -->
 
-<div class="row-5">
-  <div class="col">
-    <div class="up-to">
-
-      <p class="up-to-p">What are you up to?</p>
-
-      <p class="up-to-select"> Select any category of your interest and explore</p>
-
-
-      <button class="up-to-button" type="button" name="button"> Sign up and get involved</button>
-    </div>
-    </div>
-</div>
 
       <div class=" up-to-container row">
 

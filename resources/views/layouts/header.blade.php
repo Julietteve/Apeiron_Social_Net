@@ -35,7 +35,7 @@
   <a name="top"></a>
   <!-- MENU RESPONSIVE -->
 
-  <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+  <!-- <nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
 
   <a class="navbar-brand" href="/post">
 
@@ -65,66 +65,101 @@
 
 
 
-            <li class="nav-item">
-              @guest
-                  <li style="font-size:1em; font-weight:normal" class="nav-item">
-                      <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                  </li>
-                  @if (Route::has('register'))
-                      <li style="font-size:1em; font-weight:normal" class="nav-item">
-                          <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                      </li>
-                  @endif
-              @else
-                  <li style="font-size:1em; font-weight:normal" class="nav-item dropdown">
-                     <img  style="width:15%; border-radius:50%; display:inline" src="{{Auth::user()->profile_pic}}" alt="">
-                      <a  style="display:inline"sid="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                          {{ Auth::user()->nickname }} <span class="caret"></span>
-                      </a>
-
-                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                            <div class="">
-
-
-
-                              <a class="dropdown-item" href="/profile/{id}">
-                                  {{ __('My profile') }}
-                              </a>
-
-                              <a class="dropdown-item" href="/profile/{id}/edit">
-                                  {{ __('Edit my profile') }}
-                              </a>
-
-                              <a class="dropdown-item" href="/faqs">
-                                  {{ __('F.A.Qs') }}
-                              </a>
-
-                              <a class="dropdown-item" href="/contact">
-                                  {{ __('Contact Us') }}
-                              </a>
-
-                              <a style="color:#f24534" class="dropdown-item" href="{{ route('logout') }}"
-                                 onclick="event.preventDefault();
-                                               document.getElementById('logout-form').submit();">
-                                  {{ __('Logout') }}
-                              </a>
-
-
-                            </div>
-
-
-
-                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                              @csrf
-                          </form>
-                      </div>
-                  </li>
-              @endguest
-              </nav>
-            </li>
         </ul>
+    </div> -->
+
+
+
+
+    <nav style="font-size:1em; font-weight:normal;padding-right:5%" class="navbar navbar-expand-lg navbar-light bg-light">
+<a style="font-size:1em; font-weight:normal;color:white" class="navbar-brand" href="/post">APEIRÓN
+</a>
+<button style=""class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav mr-auto">
+
+    <div class="box">
+      <form class="form-inline my-2 my-lg-0" action="/search" method="get" >
+        <div class="container-1">
+
+          <input class="form-control mr-sm-2" name="q" placeholder="Search an User..." value="{{ request('q') }}" type="search" id="search"  />
+          </div>
+      </form>
     </div>
 
+
+  </ul>
+
+  <li style="font-size:1.1em; font-weight:normal;padding-right:5%; color:white" class="nav-item active">
+        <a  class="nav-link" href="/post">Home<span class="sr-only">(current)</span></a>
+      </li>
+  <li style="font-size:1em; font-weight:normal; color:white"  class="nav-item dropdown">
+
+
+                  @guest
+                      <li style="font-size:1em; font-weight:normal" class="nav-item">
+                          <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                      </li>
+                      @if (Route::has('register'))
+                          <li style="font-size:1em; font-weight:normal" class="nav-item">
+                              <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                          </li>
+                      @endif
+                  @else
+                      <li style="font-size:1em; font-weight:normal" class="nav-item dropdown">
+                         <img  style="width:15%; border-radius:50%; display:inline" src="{{Auth::user()->profile_pic}}" alt="">
+                          <a  style="display:inline; color:white"id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                              {{Auth::user()->nickname}} <span class="caret"></span>
+                          </a>
+
+                              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <div class="">
+
+
+
+                                  <a class="dropdown-item" href="/profile/{{ Auth::user()->id }}">
+                                      {{ __('My profile') }}
+                                  </a>
+
+                                  <a class="dropdown-item" href="/profile/{id}/edit">
+                                      {{ __('Edit my profile') }}
+                                  </a>
+
+                                  <a class="dropdown-item" href="/faqs">
+                                      {{ __('F.A.Qs') }}
+                                  </a>
+
+                                  <a class="dropdown-item" href="/contact">
+                                      {{ __('Contact Us') }}
+                                  </a>
+
+                                  <a style="color:#f24534" class="dropdown-item" href="{{ route('logout') }}"
+                                     onclick="event.preventDefault();
+                                                   document.getElementById('logout-form').submit();">
+                                      {{ __('Logout') }}
+                                  </a>
+
+
+                                </div>
+
+
+
+                              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                  @csrf
+                              </form>
+                          </div>
+                      </li>
+                  @endguest
+
+
+  </li>
+
+
+</div>
+</nav>
 
 
 

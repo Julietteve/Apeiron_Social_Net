@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Contact;
 
 class ContactController extends Controller
 {
@@ -32,10 +33,38 @@ class ContactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+
+
+     public function store(Request $request)
+     {
+       $this->validate($request,
+       [
+             'contact_name' => 'required',
+             'contact_email' => 'required',
+            'contact_issue' => 'required',
+            'contact_message' => 'required',
+
+
+       ],
+       );
+
+
+         $newContact= new Contact;
+
+         $newContact->name=$request->contact_name;
+         $newContact->email=$request->contact_email;
+         $newContact->issue=$request->contact_issue;
+         $newContact->message=$request->contact_message;
+
+
+
+         $newContact->save();
+
+
+
+         return redirect('post');
+     }
+
 
     /**
      * Display the specified resource.

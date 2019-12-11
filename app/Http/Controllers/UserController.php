@@ -66,9 +66,18 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+
+      public function ProfileUpdate(Request $request)
     {
-        //
+        $user= auth()->user();
+        $data = array_diff($request->all(), $user->toArray());
+        $data['profile_pic'] = $user->image;
+        if ($request->hasFile('profile_pic')) {
+            $data['image'] = $request->file('profile_pic')->store('users');
+        }
+        $update=$user->update($data);
+
+        return redirect('post');
     }
 
     /**

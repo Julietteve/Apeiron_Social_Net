@@ -1,13 +1,13 @@
 <!-- FOOTER -->
 
-    <div id="up"><a href="#top"> <img class="up"src="img/up.png"alt=""></a></div>
+
 
       <footer>
-        <div class="position-sticky footer-top">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-4 col-sm-3 col-xs-12 footer-one">
 
+          <div class="container-fluid">
+            <div style="display:flex; justify-content:center" class="row">
+              <div class="col-12 footer-one">
+                <div style="text-align:center"class="position-sticky footer-top">
                 <a href="#"><i  class=" icons fab fa-twitter"></i></a>
 
                 <a href="#"><i class="icons fab fa-facebook-f"></i></a>
@@ -16,32 +16,16 @@
 
                 <a href="#"> <i class="icons fab fa-linkedin-in"></i></a>
 
-                <p class="apeiron-footer">APEIRÓN</p>
-                <p class="everything-footer">Where <br> everything <br> begins</p>
+                <p style="text-align:center; color:white; font-size:2em"class="">APEIRÓN</p>
+                <a style="width:40%"class="navbar-brand" href="/post"><img  class="img-responsive logo" src="/img/apeiron_logo.png" alt=""></a>
+                <p style="text-align:center"class="everything-footer">Where everything begins</p>
 
               </div>
 
-              <div class="col-4 col-sm-3 col-xs-12 segment-two">
+                <ul style="display:flex; justify-content:center;" class="list">
 
-                <ul class="list">
-                  <li class="footer-title"> Makers</li>
-                  <li> <a href="#"></a>Sculptors</li>
-                  <li> <a href="#"></a>Painters</li>
-                  <li> <a href="#"></a>Illustrators</li>
-                  <li> <a href="#"></a>Photographers</li>
-                  <li> <a href="#"></a>Developers</li>
-                  <li> <a href="#"></a>Digital Artists</li>
-                </ul>
-              </div>
-
-              <div class="col-4 col-sm-3 col-xs-12 segment-two">
-
-                <ul class="list">
-                  <li class="footer-title">Resources</li>
-                  <li> <a href="#"></a>Support</li>
-                  <li> <a href="#"></a>Our Guide</li>
-                  <li> <a href="#"></a>F.A.Qs</li>
-                  <li> <a href="#"></a>Contact</li>
+                  <li> <a href="/faqs"></a>F.A.Qs</li> </a>
+                  <li> <a href="/contact"></a>Contact</li></a>
                 </ul>
               </div>
 
