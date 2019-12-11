@@ -26,7 +26,7 @@
 
             <div >
               <div class="profile-pic">
-                <img style="border-radius: 50%" src="{{Auth::user()->profile_pic}}" class="img-fluid" alt="">
+                <img style="border-radius: 50%" src="{{ Storage::url(auth()->user()->profile_pic) }}" class="img-fluid" alt="">
               </div>
 
               <div class="user-name">
@@ -151,20 +151,7 @@
 
           </div>
 
-                   <form method="post" action="">
-                       @csrf
-                       <div class="form-group">
-                         <div class="comment-contains">
-                          <img style="border-radius: 50%" class=" post-media-pic comment-pic"src="{{Auth::user()->profile_pic}}" alt="">
-                           <textarea style="font-size:0.8em" placeholder="Remember, be nice!" wrap="off"class="comment"  class="form-control" name="body"></textarea>
-                          </div>
-                           <input type="hidden" name="post_id" value="" />
-                           <div >
-                               <button style="font-size:0.8em; background-color:#e4ecf3; color:#44495c"type="submit"  class="boton-post"/> Comment</button>
-                           </div>
-                       </div>
 
-                   </form>
 
 
 

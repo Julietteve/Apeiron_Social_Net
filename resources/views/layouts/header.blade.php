@@ -101,16 +101,16 @@
 
                   @guest
                       <li style="font-size:1em; font-weight:normal" class="nav-item">
-                          <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                          <a  style="font-size:1em; font-weight:normal; color:white" class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                       </li>
                       @if (Route::has('register'))
                           <li style="font-size:1em; font-weight:normal" class="nav-item">
-                              <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                              <a  style="font-size:1em; font-weight:normal; color:white" class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                           </li>
                       @endif
                   @else
                       <li style="font-size:1em; font-weight:normal" class="nav-item dropdown">
-                         <img  style="width:15%; border-radius:50%; display:inline" src="{{Auth::user()->profile_pic}}" alt="">
+                         <img  style="width:15%; border-radius:50%; display:inline" src="{{ Storage::url(auth()->user()->profile_pic) }}"  alt="">
                           <a  style="display:inline; color:white"id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                               {{Auth::user()->nickname}} <span class="caret"></span>
                           </a>

@@ -3,17 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
-class UserController extends Controller
+use App\Comment;
+
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(User $id)
+    public function index()
     {
-        return view ('Profile.profile')->with('user',$id);
+        //
     }
 
     /**
@@ -34,7 +35,23 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+      $this->validate($request,
+      [
+            'body' => 'required',
+      ],
+      );
+
+
+        $Comment= new Comment;
+
+        $Comment->body=$request->body;
+
+
+        $Comment->save();
+
+
+        return view('post', compact('comment'));
+
     }
 
     /**
@@ -66,18 +83,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-
-      public function ProfileUpdate(Request $request)
+    public function update(Request $request, $id)
     {
-        $user= auth()->user();
-        $data = array_diff($request->all(), $user->toArray());
-        $data['profile_pic'] = $user->image;
-        if ($request->hasFile('profile_pic')) {
-            $data['profile_pic'] = $request->file('profile_pic')->store('users');
-        }
-        $update=$user->update($data);
-
-        return redirect('post');
+        //
     }
 
     /**

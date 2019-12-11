@@ -52,5 +52,7 @@ Route::get('/contact', 'ContactController@index');
 Route::get('/faqs', 'FaqsController@index');
 
 //contact_team
-
 Route::post('/contact', 'ContactController@store');
+
+//comments
+Route::post('/post', 'CommentController@store');

@@ -1166,6 +1166,17 @@ button.boton-post{
   float: right;
 }
 
+input.boton-post{
+  text-transform: capitalize;
+  background-color:#f24534;
+  color: white;
+  border: none;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-size: 1.2em;
+  float: right;
+}
+
 
 
 

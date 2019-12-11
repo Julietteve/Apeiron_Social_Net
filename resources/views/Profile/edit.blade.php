@@ -17,11 +17,12 @@
 
             <div >
               <div class="profile-pic">
-                <img  style="border-radius: 50%; margin:5%;display: flex;justify-content: center" src="/img/profilepic.png" class="img-fluid update-pic" alt="">
+                <img  style="border-radius: 50%; margin:5%;display: flex;justify-content: center" src= '{{Auth::user()->profile_pic}}' class="img-fluid update-pic" alt="">
               </div>
               <div style="display: flex;justify-content: center;margin:5%">
                 <div class="">
-                  <input type="file" name="profile_pic">
+                  <input type="file" name="profile_pic" value="">
+                  <button class="boton-post"> Upload</button>
                 </div>
               </div>
           </div>
