@@ -55,7 +55,7 @@
         <textarea class="form-control" name="contact_message" id="exampleFormControlTextarea1" rows="3"></textarea >
         </div>
 
-        <button type="submit" class="btn btn-primary">Let us know!</button>
+        <button type="submit" class="boton-post">Let us know!</button>
 
 
 

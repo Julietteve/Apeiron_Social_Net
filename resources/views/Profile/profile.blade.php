@@ -30,7 +30,7 @@
               </div>
 
               <div class="user-name">
-                <p >{{ $user->nickname }}</p>
+                <p >{{ $user->name }}</p>
               </div>
 
               <div class="profession">
@@ -110,39 +110,71 @@
 <div class="col-12 col-md-8">
 <div class="post-container">
 
-<div class="row">
+
+  @foreach ($posts as $post)
+      <div class="feed rounded">
 
 
+        <div class="rounded inner-div">
 
-          <article class="col-sm-12  col-lg-6">
-              <a data-fancybox="gallery" href="/img/example.jpg"><img class= "rounded img-fluid  home-article gallery-item "src="/img/example.jpg"></a>
-          </article>
+          <div class="btn-group ">
+            <button  style="background-color:white !important; border:none !important; color:gray; float:left"class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+            <div class="dropdown-menu">
 
-          <article class="col-sm-12  col-lg-6">
-              <a data-fancybox="gallery" href="/img/example.jpg"><img class= "rounded img-fluid  home-article gallery-item "src="/img/example.jpg"></a>
-          </article>
+                <form class="" action="/post" method="post">
+                  {{csrf_field()}}
+                  @method('delete')
 
+                  <input type="hidden" name="id" value="{{$post->id}}">
+                  <input style="background-color:white; color: gray; font-weight:lighter;; size:0.8em; border:none"type="submit" name="" value="Delete Post">
 
-
-                    <article class="col-sm-12  col-lg-6">
-                        <a data-fancybox="gallery" href="/img/example.jpg"><img class= "rounded img-fluid  home-article gallery-item "src="/img/example.jpg"></a>
-                    </article>
-
-                    <article class="col-sm-12  col-lg-6">
-                        <a data-fancybox="gallery" href="/img/example.jpg"><img class= "rounded img-fluid  home-article gallery-item "src="/img/example.jpg"></a>
-                    </article>
+                </form>
 
 
-                              <article class="col-sm-12  col-lg-6">
-                                  <a data-fancybox="gallery" href="/img/example.jpg"><img class= "rounded img-fluid  home-article gallery-item "src="/img/example.jpg"></a>
-                              </article>
+            </div>
+            </div>
 
-                              <article class="col-sm-12  col-lg-6">
-                                  <a data-fancybox="gallery" href="/img/example.jpg"><img class= "rounded img-fluid  home-article gallery-item "src="/img/example.jpg"></a>
-                              </article>
+        <a href="/profile/{{ Auth::user()->id }}">
+        <div class="media-div">
+        <img style="border-radius: 50%" class="post-media-pic"src="{{Auth::user()->profile_pic}}" alt="">
+        <p class="feed-media-p"> {{Auth::user()->name}} </p>
+        </div>
+        </a>
 
+          <a data-fancybox="gallery" src="{{$post->post_image}}"><img style=" width:100% "class= "rounded img-fluid "src="{{$post->post_image}}"></a>
+
+        <div class="post-description">{{ $post->post_text }}</div>
 
           </div>
+
+          <div class="inner-comment">
+
+          </div>
+
+                   <form method="post" action="">
+                       @csrf
+                       <div class="form-group">
+                         <div class="comment-contains">
+                          <img style="border-radius: 50%" class=" post-media-pic comment-pic"src="{{Auth::user()->profile_pic}}" alt="">
+                           <textarea style="font-size:0.8em" placeholder="Remember, be nice!" wrap="off"class="comment"  class="form-control" name="body"></textarea>
+                          </div>
+                           <input type="hidden" name="post_id" value="" />
+                           <div >
+                               <button style="font-size:0.8em; background-color:#e4ecf3; color:#44495c"type="submit"  class="boton-post"/> Comment</button>
+                           </div>
+                       </div>
+
+                   </form>
+
+
+
+
+
+      </div>
+      @endforeach
+
+
+
           </div>
           </div>
 

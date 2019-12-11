@@ -44,11 +44,13 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        //
-    }
-
+     public function show(int $userId)
+   {
+       // $user = User::find($userId);
+       // $followers = $user->followers;
+       // $followings = $user->followings;
+       // return view('home.feed', compact('user', 'followers' , 'followings');
+   }
     /**
      * Show the form for editing the specified resource.
      *
